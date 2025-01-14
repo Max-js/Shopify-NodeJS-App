@@ -9,7 +9,7 @@ Use git clone to clone the project to your local machine.
 
 Open the app within your preferred IDE (I prefer VSCode).
 
-Either configure a `.env` file to contain the `DOMAIN` AND `ADMIN_TOKEN` for your store, or you can hard code the variables:  
+Either configure a `.env` file to contain the `DOMAIN` and `ADMIN_TOKEN` for your store, or you can hard code the variables:  
 - Replace domain with your store domain, (ex: your-shopify-store.myshopify.com)  
 - Replace admin token with your Shopify admin token.
 
