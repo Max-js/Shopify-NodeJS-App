@@ -43,13 +43,13 @@ function getProducts(productName) {
     })
   };
 
-  request(options, (error, body) => {
+  request(options, (error, response) => {
     if (error) {
       console.error('Error fetching products:', error);
       return;
     }
 
-    const result = JSON.parse(body.body);
+    const result = JSON.parse(response.body);
 
     if (result.errors) {
       console.error('GraphQL Errors:', result.errors);
