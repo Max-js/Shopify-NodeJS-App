@@ -80,9 +80,9 @@ console.log('Welcome to the Shopify product search tool!');
 
 function askSearchAgain() {
   rl.question('Would you like to search another product? (y/n): ', input => {
-    if (input.toLocaleLowerCase() === 'y') {
+    if (input.toLowerCase() === 'y') {
       runSearch();
-    } else if (input.toLocaleLowerCase() === 'n') {
+    } else if (input.toLowerCase() === 'n') {
       rl.close();
     } else {
       console.log('Invalid input, please enter "y" or "n".');
