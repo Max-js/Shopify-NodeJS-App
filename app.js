@@ -9,7 +9,6 @@ const domain = process.env.DOMAIN;
 const admin_token = process.env.ADMIN_TOKEN;
 
 function getProducts(productName) {
-
   const queryString = `
     query {
       products(first: 10${productName ? `, query: "title:${productName}"` : ''}) {
