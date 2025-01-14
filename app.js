@@ -9,7 +9,7 @@ const domain = process.env.DOMAIN;
 const admin_token = process.env.ADMIN_TOKEN;
 
 function getProducts(productName) {
-  const queryString = `
+  const query = `
     query {
       products(first: 10${productName ? `, query: "title:${productName}"` : ''}) {
         edges {
@@ -39,7 +39,7 @@ function getProducts(productName) {
       'X-Shopify-Access-Token': admin_token
     },
     body: JSON.stringify({
-      query: queryString,
+      query: query,
     })
   };
 
