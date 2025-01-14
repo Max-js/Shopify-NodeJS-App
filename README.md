@@ -13,4 +13,5 @@ Either configure a `.env` file to contain the `DOMAIN` AND `ADMIN_TOKEN` for you
 - Replace domain with your store domain, (ex: your-shopify-store.myshopify.com)  
 - Replace admin token with your Shopify admin token.
 
-Once this is complete you can run the app by opening a terminal, navigating to the project directory, and entering `node app.js`.
+Once this is complete you can run the app by opening a terminal, navigating to the project directory, and entering `node app.js`.  
+*Note: Running `node app.js` will take you to CLI which asks to input a product name. However you can bypass this by adding a product name argument when running the script (ex: `node app.js -shirt`).
