@@ -75,8 +75,6 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-console.log('Welcome to the Shopify product search tool!');
-
 function askSearchAgain() {
   rl.question('Would you like to search another product? (y/n): ', input => {
     if (input.toLowerCase() === 'y') {
@@ -96,4 +94,11 @@ function runSearch() {
   })
 }
 
-runSearch();
+const commandLineArgs = process.argv.slice(2);
+if (commandLineArgs.length > 0) {
+  const productName = commandLineArgs.join(' ');
+  getProducts(productName);
+} else {
+  console.log('Welcome to the Shopify product search tool!');
+  runSearch();
+}
